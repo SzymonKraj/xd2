@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -69,5 +66,14 @@ public class Main {
         //zbior zazwyczaj
         //elementy uunikatowe
         //elementy nie sa indeksowane
+
+        LinkedList<Integer> trafione = new LinkedList<>();
+        //trafione to elementy ktore wystepuja w wylosowanych i wpisanych
+        for (Integer wpisana:listaLiczbZapisanych) {
+            if(zbiorliczblosowych.contains(wpisana)){
+                trafione.add(wpisana);
+            }
+        }
+        System.out.println("trafione: "+ trafione);
     }
 }
