@@ -41,6 +41,16 @@ public class Main {
         for (int i = 0; i < listaLiczbZapisanych.size(); i++) {
             System.out.println(listaLiczbZapisanych.get(i));
         }
-
+        //losowanie bez powtorzen
+        ArrayList<Integer> tablicaliczblosowychbezpowtorzen = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            int liczba = (int)(Math.random()*100+1);
+            while(tablicaliczblosowychbezpowtorzen.contains(liczba)){
+                liczba = (int)(Math.random()*100+1);
+            }
+            tablicaliczblosowychbezpowtorzen.add(liczba);
+        }
+        System.out.println("Wylosowana bez powtorzen");
+        System.out.println(tablicaliczblosowychbezpowtorzen);
     }
 }
