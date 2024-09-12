@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hello world!");
+        System.out.println(generujhaslo());
+    }
+
+    private static String generujhaslo() {
+        String haslo = "";
+        String malelitery = "qwertyuiopasdfghjklzxcvbnm";
+        String duzelitery = "QWERTYUIOPASDFGHJKLZXCVBNM";
+        int losowa;
+        while (haslo.length() < 20) {
+            losowa = (int) (Math.random() * malelitery.length());
+            haslo = haslo + malelitery.charAt(losowa);
+            losowa = (int) (Math.random() * malelitery.length());
+            haslo = haslo + duzelitery.charAt(losowa);
+        }
+        return haslo;
+    }
+}
